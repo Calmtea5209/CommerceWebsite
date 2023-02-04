@@ -5,17 +5,20 @@ import Category from './components/Category/Category';
 import Item from './components/Item/Item';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import AppContext from './utils/context';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
+      <AppContext>
         <Header />
-        <Route path="/" element={<Home />} />
-        <Route path="/category/:id" element={<Category />} />
-        <Route path="/product/:id" element={<Item />} />
-      </Routes>
-      <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:id" element={<Category />} />
+          <Route path="/product/:id" element={<Item />} />
+        </Routes>
+        <Footer />
+      </AppContext>
     </BrowserRouter>
   );
 }
