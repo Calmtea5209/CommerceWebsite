@@ -6,6 +6,7 @@ import Item from './components/Item/Item';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import AppContext from './utils/context';
+import Newsletter from './components/Footer/Newsletter/Newsletter';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/category/:id" element={<Category />} />
           <Route path="/product/:id" element={<Item />} />
         </Routes>
+        <Newsletter />
         <Footer />
       </AppContext>
     </BrowserRouter>
